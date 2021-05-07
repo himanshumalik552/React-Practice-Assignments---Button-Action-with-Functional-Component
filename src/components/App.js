@@ -1,15 +1,20 @@
 import React, {Component, useState} from "react";
+import ReactDom from 'react-dom';
 import "./../styles/App.css";
+
 
 function App() {
 const [state, setState] = useState('')
 
+  const change=()=>
+  {
+    ReactDom.render(<p id="para">hello</p>, document.getElementById('root'));
+  }
+
+
   return (
     <div id="main">
-      <p id="para"></p>
-        <button id="click" onClick={()=>{
-          setState( document.getElementById('para').innerHTML = "Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy");
-        }}>on click</button>
+        <button id="click" onClick={change}>on click</button>
     </div>
   );
 }
