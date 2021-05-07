@@ -6,12 +6,10 @@ const [state, setState] = useState('')
 
   return (
     <div id="main">
-      {/* // Do not alter the main div */}
-
-      <p id="para">{state}</p>
+      <p id="para"></p>
         <button id="click" onClick={()=>{
-          setState(" Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy");
-        }} >on click</button>
+          setState( document.getElementById('para').innerHTML = "Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy");
+        }}>on click</button>
     </div>
   );
 }
