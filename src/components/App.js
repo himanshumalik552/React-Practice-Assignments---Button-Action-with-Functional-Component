@@ -4,16 +4,17 @@ import "./../styles/App.css";
 
 
 function App() {
-const [state, setState] = useState('')
+const [state, setState] = useState(false)
 
   const change=()=>
   {
-    ReactDom.render(<p id="para">Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy</p>, document.getElementById('root'));
+   setState({state:true});
   }
 
 
   return (
     <div id="main">
+				{state && <p id="para">Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy</p>}
         <button id="click" onClick={change}>on click</button>
     </div>
   );
